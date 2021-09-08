@@ -117,3 +117,9 @@ const ani = new Programmer("ani", "Jakarta", ["javascript", "php"])
 ani.introduce()
 ani.work()
 ani.code()
+
+
+const someVar = 10
+
+console.log("ini adalah variabel: ", someVar, " tahun")
+console.log(`ini adalah variabel ${someVar} tahun`)
