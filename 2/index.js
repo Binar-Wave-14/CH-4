@@ -123,3 +123,65 @@ const someVar = 10
 
 console.log("ini adalah variabel: ", someVar, " tahun")
 console.log(`ini adalah variabel ${someVar} tahun`)
+
+// CLASS ENKAPSULASI
+class Manusia {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+    }
+
+    work() {
+        this._intro()
+        this.#sleep()
+        console.log('I\'m work')
+    }
+
+    _intro() {
+        console.log('Hello my name is Saeful')
+    }
+
+    #sleep() {
+        this.name = "Siapa?"
+        console.log('I\'m sleep')
+    }
+}
+
+class Penulis extends Manusia {
+    constructor(name, age, hobby) {
+        super(name, age)
+        this.hobby = hobby
+    }
+
+    perkenalan() {
+        super._intro()
+        super.work()
+    }
+}
+
+const manusia = new Manusia()
+manusia.work()
+
+const penulis = new Penulis("saefulloh", 100, "makan")
+penulis.perkenalan()
+
+
+// CLASS ABSTRAK
+
+class Abstak {
+    constructor() {
+        if (this.constructor = Abstak) {
+            throw new Error('ini kelas abstrak men!')
+        }
+    }
+
+    someMethod() {
+        return 10
+    }
+
+    otherMethod() {
+        return "ini adalah string"
+    }
+}
+
+const abstrak = new Abstak()
